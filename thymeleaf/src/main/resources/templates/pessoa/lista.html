@@ -24,15 +24,21 @@
                     <th>ID</th>
                     <th>NOME</th>
                     <th>SEXO</th>
+                    
                 </tr>
             </thead>
             
             <!-- passando o nome da variável q eu to esperando na controler -->
-            <tr th:each="pessoas: ${pessoas}">
-            	<td th:text="${pessoas.id}"></td>
-            	<td th:text="${pessoas.nome}"></td>
-            	<td th:text="${pessoas.sexo}"></td>
+            <tr th:each="pessoa: ${pessoas}">
+            	<td th:text="${pessoa.id}"></td>
+            	<td th:text="${pessoa.nome}"></td>
+            	<td th:switch = "${pessoa.sexo.name()}">
+            		<span th:case="'M'"  th:text="Masculino"></span>
+            		<span th:case="'F'"  th:text="Feminino"></span>
+            	</td>
+        		
         	</tr>
+        	
        
     </table>
 </div>

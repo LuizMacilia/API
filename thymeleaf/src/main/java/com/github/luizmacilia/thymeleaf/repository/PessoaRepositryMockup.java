@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.luizmacilia.thymeleaf.model.Pessoa;
+import com.github.luizmacilia.thymeleaf.model.SexoTipo;
 
 public class PessoaRepositryMockup {
 
@@ -20,13 +21,13 @@ public class PessoaRepositryMockup {
 		//instanciar ja recebendo valores
 		//para instânciar ela (new) eu preciso criar um Construtor nela
 		//1L pois é long
-		Pessoa pessoa = new Pessoa(1L, "Pelé", "M");
+		Pessoa pessoa = new Pessoa(1L, "Pelé", SexoTipo.M);
 		result.add(pessoa);
 		
-		pessoa = new Pessoa(2L, "Rainha Elizabeth", "F");
+		pessoa = new Pessoa(2L, "Rainha Elizabeth", SexoTipo.F);
 		result.add(pessoa);
 		
-		result.add(new Pessoa(3L, "Beyonce", "F"));
+		result.add(new Pessoa(3L, "Beyonce", SexoTipo.F));
 		
 		
 		return result;
