@@ -1,8 +1,17 @@
 package com.github.luizmacilia.thymeleaf.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+
+@Entity
 public class Pessoa {
+	@Id
 	private Long id;
 	private String nome;
+	//avisar q para criar a tabela ele tem q criar como String
+	@Enumerated(EnumType.STRING)
 	private SexoTipo sexo;
 	
 	

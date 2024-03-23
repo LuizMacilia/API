@@ -3,11 +3,15 @@ package com.github.luizmacilia.thymeleaf.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.github.luizmacilia.thymeleaf.model.Pessoa;
 import com.github.luizmacilia.thymeleaf.model.SexoTipo;
 
+@Service
 public class PessoaRepositryMockup {
 
+	/*
 //Quero que essa classe retorne uma lista de dados
 //1	Pelé	Masculino
 //2	Rainha Elizabeth	Feminino
@@ -32,5 +36,21 @@ public class PessoaRepositryMockup {
 		
 		return result;
 	}
+	 */
+
+	public List<Pessoa> list(){
+	List<Pessoa> result = new ArrayList<>();
+	
+	Pessoa pessoa = new Pessoa(1L, "Pelé", SexoTipo.M);
+	result.add(pessoa);
+	
+	return result;
+	
+	}
+	
+	
+	
+	
+	
 	
 }
